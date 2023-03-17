@@ -1,0 +1,263 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.catalogGrid {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1.5fr 1.2fr;
+  grid-template-areas:
+    "heroImageDiv productMain productMain productMain"
+    "heroImageDiv productMain productMain productMain";
+  gap: 1rem;
+}
+
+.heroImageDiv {
+  grid-area: heroImageDiv;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productMain {
+  display: grid;
+  grid-template-columns: 0.1fr 0.1fr 0.1fr;
+  grid-template-rows: 0fr 0fr 0fr;
+  gap: 1rem;
+  grid-area: productMain;
+}
+
+.productCard {
+  width: 14vw;
+  border: 2px solid #e5e7eb;
+  height: 43.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 0.45rem;
+}
+
+.productImageDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 14vw;
+  background-color: #f3f4f6;
+}
+
+.productImage {
+  max-height: 25vh;
+  max-width: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.productName h1 {
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.productStars {
+  display: flex;
+  gap: 0.15rem;
+  padding-left: 0.5rem;
+}
+
+.productRetail {
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productRetail h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.productButton {
+  cursor: pointer;
+  padding: 0.2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  transition: 100ms ease-in;
+  margin-right: 2rem;
+}
+
+.productButton:hover {
+  background-color: #d1d5db;
+}
+
+@media only screen and (max-width: 1099px) {
+  .catalogGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1.2fr;
+    grid-template-areas:
+      "heroImageDiv"
+      "productMain";
+  }
+  .productMain {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.1fr 0.1fr 0.1fr;
+  }
+
+  .productCard {
+    width: 30vw;
+  }
+
+  .productImageDiv {
+    width: 30vw;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .productMain {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.1fr 0.1fr;
+  }
+
+  .productCard {
+    width: 45vw;
+  }
+
+  .productImageDiv {
+    width: 45vw;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .catalogGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1.2fr;
+    grid-template-areas:
+      "heroImageDiv"
+      "productMain";
+  }
+  .productMain {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.1fr;
+  }
+
+  .productCard {
+    width: 90vw;
+  }
+
+  .productImageDiv {
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .catalogGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1.2fr;
+    grid-template-areas:
+      "heroImageDiv"
+      "productMain";
+  }
+  .productMain {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.1fr;
+  }
+
+  .productCard {
+    width: 90vw;
+    height: 50vh;
+  }
+
+  .productImageDiv {
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-height: 850px) {
+  .productCard {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .productCard {
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-height: 550px) {
+  .catalogGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1.2fr;
+    grid-template-areas:
+      "heroImageDiv"
+      "productMain";
+  }
+  .productMain {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.1fr;
+  }
+
+  .productCard {
+    width: 75vw;
+    height: 90vh;
+  }
+
+  .productImageDiv {
+    width: 75vw;
+    height: 85vh;
+  }
+
+  .productImage {
+    max-height: 50vh;
+  }
+  .productRetail {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-height: 414px) {
+  .catalogGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1.2fr;
+    grid-template-areas:
+      "heroImageDiv"
+      "productMain";
+  }
+  .productMain {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.1fr;
+  }
+
+  .productCard {
+    width: 93vw;
+    height: 95vh;
+  }
+
+  .productImageDiv {
+    width: 93vw;
+    height: 95vh;
+  }
+}
